@@ -5,8 +5,8 @@ from . import models
 # Create your views here.
 def index(request):
     courses = models.Course.objects.all()
-    res = ''
-    for c in courses:
-        res += f"<br>{str(c)}"
+    # return HttpResponse(str(course)+'<br>' for course in courses)
+    return render(request, 'courses.html')
 
-    return HttpResponse(res)
+
+
