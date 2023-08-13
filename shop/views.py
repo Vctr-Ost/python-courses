@@ -6,7 +6,7 @@ from . import models
 def index(request):
     courses = models.Course.objects.all()
     # return HttpResponse(str(course)+'<br>' for course in courses)
-    return render(request, 'courses.html')
+    return render(request, 'courses.html', {'courses': courses})
 
 
 
